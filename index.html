@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Contactos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1> List Contact 🌸</h1>
+    <button id="btnNuevo">➕ Nuevo contacto</button>
+  </header>
+
+  <div id="lista" class="lista"></div>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <h2>Nuevo Contacto</h2>
+
+    <form id="form">
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="text" id="apellido" placeholder="Apellido" required>
+      <input type="email" id="correo" placeholder="Correo" required>
+      <input type="text" id="telefono" placeholder="Teléfono" required pattern="[0-9]{7,15}">
+      <input type="text" id="ciudad" placeholder="Ciudad" required>
+
+      <select id="genero" required>
+        <option value="">Género</option>
+        <option value="F">Femenino</option>
+        <option value="M">Masculino</option>
+      </select>
+
+      <div class="acciones">
+        <button type="submit">💖 Guardar</button>
+        <button type="button" id="cerrar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast hidden"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
